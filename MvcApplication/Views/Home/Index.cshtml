@@ -1,4 +1,6 @@
-﻿@{
+﻿@using MvcApplication.Models
+@model IEnumerable<Province>
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -6,3 +8,26 @@
 <p>
     To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
 </p>
+
+<h1>Provinces of Argentina</h1>
+<ul>
+@foreach (var province in Model)
+{
+    <li>
+        <h3>@province.Name</h3>
+        <dl>
+            <dt>ISO 3166-2</dt>
+            <dd>@province.Iso</dd>
+            <dt>Capital</dt>
+            <dd>@province.Capital</dd>
+            <dt>Population</dt>
+            <dd>@province.Population</dd>
+            <dt>Area (km2)</dt>
+            <dd>@province.Area</dd>
+            <dt>Density</dt>
+            <dd>@province.Density</dd>
+
+        </dl>
+    </li>
+}
+</ul>
