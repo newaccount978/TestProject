@@ -9,20 +9,12 @@ namespace MvcApplication.Controllers
 {
     public class HomeController : Controller
     {
+        public readonly ProvincesRepository ProvincesRepository = new ProvincesRepository();
         public ActionResult Index()
         {
             ViewBag.Message = "Welcome to GitHub demo! (edited online)";
-            var provinces = new[] {
-                new Province() 
-                { 
-                    Name = "Buenos Aires", 
-                    Population = 15625084,
-                    Area = 307571,
-                    Capital = "La Plata",
-                    Iso = "AR-B"
-                }
-            };
-            return View(provinces.OrderBy(x => x.Name));
+            var provinces = ProvincesRepository.GetAll();
+            return View(provinces);
         }
 
         public ActionResult About()
