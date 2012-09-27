@@ -13,8 +13,8 @@ namespace MvcApplication.Models
             {
                 new Province() 
                 { 
-                    Name = "Buenos Aires", 
-                    Iso = "AR-B",
+                    Name = "Catamarca", 
+                    Iso = "CA",
                     Population = 15625084,
                     Area = 307571,
                     Capital = "La Plata"
