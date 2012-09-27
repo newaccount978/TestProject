@@ -12,7 +12,7 @@ namespace MvcApplication.Controllers
         public readonly ProvincesRepository ProvincesRepository = new ProvincesRepository();
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to GitHub demo! (edited online)";
+            ViewBag.Message = "Welcome to GitHub demo! (edited online) - Viendo el workshop";
             var provinces = ProvincesRepository.GetAll();
             return View(provinces);
         }
