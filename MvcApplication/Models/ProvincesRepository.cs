@@ -14,7 +14,7 @@ namespace MvcApplication.Models
                 new Province() 
                 { 
                     Name = "Catamarca", 
-                    Iso = "AR-B",
+                    Iso = "CA",
                     Population = 15625084,
                     Area = 307571,
                     Capital = "La Plata"
